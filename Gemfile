@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby "2.0.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
@@ -38,7 +38,7 @@ end
 gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+  gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
@@ -48,7 +48,9 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'dynamic_form' # for error_messages_for
 gem 'rake_db_dump'
-gem 'rails-footnotes', github: 'rrooding/rails-footnotes', ref: '0b6bc7'
+
+gem 'thin'
+
 gem 'rails_12factor' # serve production assets
 gem 'pry-rails', group: :development
 gem 'awesome_print', group: :development
