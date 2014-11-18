@@ -1,0 +1,63 @@
+<h1>Add New Log</h1>
+
+<%== error_messages_for @log %>
+
+<%== form_tag "/admin_logs" do %>
+
+ <p>
+    Driver:
+    <br>
+    <%== text_field_tag :driver, @log.driver %>
+  </p>
+
+   <p>
+    Reference #:
+    <br>
+    <%== text_field_tag :reference_num, @log.reference_num %>
+  </p>
+ <p>
+    Company:
+    <br>
+    <%== text_field_tag :company, @log.company %>
+  </p>
+  <p>
+    Address:
+    <br>
+    <%== text_field_tag :address, @log.address %>
+  </p>
+  <p>
+    Suite #:
+    <br>
+    <%== text_field_tag :suite_num, @log.suite_num %>
+  </p>
+
+  <p>
+    City:
+    <br>
+    <%== text_field_tag :city, @log.city %>
+  </p>
+  <p>
+    Zip:
+    <br>
+    <%== text_field_tag :zip_code, @log.zip_code %>
+  </p>
+  <p>
+    Notes:
+    <br>
+    <%== text_field_tag :note, @log.note %>
+  </p>
+  <p>
+    Pick-up:
+    <br>
+    <%== text_field_tag :pick_up, @log.pick_up %>
+  </p>
+  <p>
+    Delivery:
+    <br>
+    <%== text_field_tag :delivery, @log.delivery %>
+  </p>
+
+  <p>
+    <%== submit_tag "Create" %>
+  <p>
+<% end %>

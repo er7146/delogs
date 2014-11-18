@@ -1,0 +1,46 @@
+<h1>Deliveries Logs</h1>
+
+<table border="1">
+  <tr>
+    <th>ID #</th>
+    <th>Driver</th>
+    <th>Reference #</th>
+    <th>Company</th>
+    <th>Address</th>
+    <th>Suite #</th>
+    <th>City</th>
+    <th>Zip Code</th>
+    <th>Notes</th>
+    <th>Received by</th>
+    <th>Time</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <% for log in @logs %>
+    <tr>
+      <td><%= log.id %></td>
+      <td><%= log.driver %></td>
+      <td><%= log.reference_num %></td>
+      <td><%= log.company %></td>
+      <td><%= log.address %></td>
+      <td><%= log.suite_num %></td>
+      <td><%= log.city %></td>
+      <td><%= log.zip_code %></td>
+      <td><%= log.note %></td>
+      <td><%= log.received_by %></td>
+      <td><%= log.updated_at %></td>
+      <td>
+        <a href="/admin_logs/<%= log.id %>/edit">Edit</a>
+      </td>
+      <td>
+        <a href="/admin_logs/<%= log.id %>" data-method="delete"
+           data-confirm="Are you sure?">Delete</a>
+      </td>
+    </tr>
+  <% end %>
+  <tr>
+    <td colspan="5">
+      <a href="/admin_logs/new">Add new log</a>
+    </td>
+  </tr>
+</table>

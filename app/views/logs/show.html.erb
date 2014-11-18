@@ -1,0 +1,18 @@
+<h4><%= @log.company %>, <%= @log.address %>, Ste #<%= @log.suite_num %> </4>
+<h4><%= @log.city %>, <%= @log.zip_code %>, CO</h4>
+
+<p>
+  <b>Reference Number:</b>
+  <%= @log.reference_num %>
+</p>
+<p>
+  <b>Notes:</b>
+  <%= @log.note %>
+</p>
+
+<p>
+  <b>Received by:</b>
+  <%= @log.received_by %>
+</p>
+<h4>Time: <%= @log.updated_at %></h4>
+<h4><a href="/">Back to Main</a></h4>

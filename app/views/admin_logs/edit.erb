@@ -1,0 +1,73 @@
+<h1>Pick-Up / Delivery Details #<%= @log.id %></h1>
+
+<%== error_messages_for @log %>
+
+<%== form_tag "/admin_logs/#{@log.id}", method: "PUT" do %>
+  <p>
+    <b>ID #: </b><%= @log.id %>
+  </p>
+  
+  <p>
+    Driver:
+    <br>
+     <%= text_field_tag :driver, @log.driver %>
+  </p>
+   <p>
+    Reference #:
+    <br>
+    <%== text_field_tag :reference_num, @log.reference_num %>
+  </p>
+  <p>
+    Company
+    <br>
+    <%== text_field_tag :company, @log.company %>
+  </p>
+
+  <p>
+    Address
+    <br>
+    <%== text_field_tag :address, @log.address %>
+  </p>
+   <p>
+    Suite #
+    <br>
+    <%== text_field_tag :suite_num, @log.suite_num %>
+  </p>
+
+  <p>
+    City
+    <br>
+    <%== text_field_tag :city, @log.city %>
+  </p>
+
+  <p>
+    Zip Code
+    <br>
+    <%== text_field_tag :zip_code, @log.zip_code %>
+  </p>
+  <p>
+    Notes
+    <br>
+    <%== text_field_tag :note, @log.note %>
+  </p>
+    <p>
+    Pick-Up
+    <br>
+    <%== text_field_tag :pick_up, @log.pick_up %>
+  </p>
+
+  <p>
+    Delivery
+    <br>
+    <%== text_field_tag :delivery, @log.delivery %>
+  </p>
+  <p>
+    Received by:
+    <br>
+    <%== text_field_tag :received_by, @log.received_by %>
+  </p>
+
+  <p>
+    <%== submit_tag "Update" %>
+  </p>
+<% end %>
